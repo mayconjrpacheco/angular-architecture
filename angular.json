@@ -7,8 +7,22 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
+      "prefix": "",
+      "schematics": {
+        "@schematics/angular:class": {
+          "spec": false
+        },
+        "@schematics/angular:service": {
+          "spec": false
+        },
+        "@schematics/angular:module": {
+          "spec": false
+        },
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "spec": false
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -123,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "angular-architecture"
+  "defaultProject": "angular-architecture",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
